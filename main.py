@@ -80,6 +80,11 @@ class SandwichMachine:
             self.machine_resources[item] -= order_ingredients[item]
         print(f"{sandwich_size} sandwich is ready. Bon appetit!")
 
+    def report(self):
+        print(f"Bread: {self.machine_resources['bread']} slice(s)")
+        print(f"Ham: {self.machine_resources['ham']} slice(s)")
+        print(f"Cheese: {self.machine_resources['cheese']} pound(s)")
+
 
 ### Make an instance of SandwichMachine class and write the rest of the codes ###
 machine = SandwichMachine(resources)
