@@ -64,3 +64,20 @@ class SandwichMachine:
            Hint: no output"""
 
 ### Make an instance of SandwichMachine class and write the rest of the codes ###
+machine = SandwichMachine(resources)
+
+while True:
+    choice = input("What would you like? (small/ medium/ large/ off/ report): ").lower()
+
+    if choice == "off":
+        break
+    elif choice == "report":
+        machine.report()
+    elif choice in recipes:
+        sandwich = recipes[choice]
+        if machine.check_resources(sandwich["ingredients"]):
+            coins = machine.process_coins()
+            if machine.transaction_result(coins, sandwich["cost"]):
+                machine.make_sandwich(choice, sandwich["ingredients"])
+    else:
+        print("Invalid input.")
