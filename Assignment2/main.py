@@ -7,7 +7,7 @@ from cashier import Cashier
 resources = data.resources
 recipes = data.recipes
 sandwich_maker_instance = SandwichMaker(resources)
-cashier_instance = ######
+cashier_instance = Cashier()
 
 
 
