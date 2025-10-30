@@ -158,3 +158,7 @@ def delete_one_recipe(recipe_id: int, db: Session = Depends(get_db)):
     if recipe is None:
         raise HTTPException(status_code=404, detail="User not found")
     return recipes.delete(db=db, recipe_id=recipe_id)
+
+# Order_details
+
+
